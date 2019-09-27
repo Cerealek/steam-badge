@@ -25,3 +25,5 @@ Fill out the form at `https://steamcommunity.com/dev/apikey` (available only aft
 
 ### That's it.
 Now, you can simply run the index.php, and you should see your Steam badge displaying your current status, and recent activity, very much like it's displayed in your profile.
+
+![alt text](preview/badge.jpg "Example of a badge")
