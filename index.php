@@ -23,34 +23,34 @@ function getWord($unit, $val) {
 	switch ($unit) {
 		case WEEK:
 			if ($val > 1) { // weeks plural
-				return $val.' týdny';
+				return $val.' weeks';
 			} elseif ($val == 1) { // last week singular
-				return 'minulý týden';
+				return 'last week';
 			}
 		break;
 		case DAY:
 			if ($val > 2) { // before N days
-				return $val.' dny';
+				return $val.' days ago';
 			} elseif ($val == 2) { // day before yesterday
-				return 'předevčírem';
+				return 'day before yesterday';
 			} else { // yesterday
-				return 'včera';
+				return 'yesterday';
 			}
 		break;
 		case HOURS:
 			if ($val > 1) { // N hours ago
-				return $val.' hodinami';
+				return $val.' hours ago';
 			} elseif ($val == 1) {
-				return '1 hodinou'; // 1 hour ago
+				return '1 gour ago'; // 1 hour ago
 			}
 		break;
 		case MINUTE:
 			if ($val > 1) {
-				return $val.' minutami'; // N minutes ago
+				return $val.' minutes ago'; // N minutes ago
 			} elseif ($val == 1) { 
-				return '1 minutou'; // one minute ago
+				return '1 minute ago'; // one minute ago
 			} else {
-				return 'Před méně než minutou'; // less than one minute
+				return 'less than a minute ago'; // less than one minute
 			}
 		break;
 	}
@@ -99,7 +99,7 @@ $recently_played = $recently_played_json['response']['games'];
 
 if ($player->personastate == 0) {
 	$last_online_diff = time() - $player->lastlogoff;
-	$status_readable = 'Naposledy online před '.format_logoff_time($last_online_diff);
+	$status_readable = 'Last online '.format_logoff_time($last_online_diff);
 }
 
 
@@ -116,14 +116,14 @@ if ($player->personastate == 0) {
 	</div>
 </div>
 <div class="recent">
-	<h4>Nedávno hrané:</h4>
+	<h4>Recently played:</h4>
 	<ul>
 	<?
 	foreach ($recently_played as $game):?>
 		<li>
 			<span class="icon"><img src="http://media.steampowered.com/steamcommunity/public/images/apps/<?=$game['appid']?>/<?=$game['img_icon_url']?>.jpg" /></span>
 			<span class="data"><?= $game['name']?><br />
-				<span class="small"><?= format_time($game['playtime_2weeks'])?> hod. za poslední 2 týdny</span>
+				<span class="small"><?= format_time($game['playtime_2weeks'])?> hours past 2 weeks</span>
 			</span>
 		</li>
 	<?endforeach;?>
