@@ -1,0 +1,92 @@
+body {
+  padding: 0px;
+  margin: 0px; }
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif; }
+
+.badge {
+  border: 1px solid #1B262F;
+  width: 300px;
+  height: 66px;
+  background-image: linear-gradient(to bottom, rgba(19, 101, 125, 0.5), rgba(35, 38, 44, 0.5)), linear-gradient(to right, #13657d, #1e356e);
+  padding: 8px;
+  position: relative; }
+  .badge:before {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    left: 1px;
+    top: 1px;
+    height: 1px;
+    background: #007795; }
+  .badge .icon {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    box-shadow: #24333E 0 0 15px;
+    display: block;
+    float: left; }
+    .badge .icon img {
+      width: 48px;
+      height: 48px; }
+  .badge .player-status {
+    display: block;
+    margin-left: 8px;
+    padding-top: 15px;
+    float: left; }
+    .badge .player-status h3, .badge .player-status h4 {
+      margin: 0px;
+      padding: 0px;
+      font-weight: normal;
+      text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 0.5px, rgba(0, 0, 0, 0.5) -1px -1px 0.5px; }
+    .badge .player-status h3 {
+      font-size: 15px; }
+    .badge .player-status h4 {
+      margin-top: 3px;
+      font-size: 13px; }
+    .badge .player-status.online h3 {
+      color: #66C2E6; }
+    .badge .player-status.online h4 {
+      color: #66A4BB; }
+    .badge .player-status.ingame h3 {
+      color: #D8F4B9; }
+    .badge .player-status.ingame h4 {
+      color: #91C257; }
+    .badge .player-status.offline h3 {
+      color: #888; }
+    .badge .player-status.offline h4 {
+      color: #888; }
+
+.recent {
+  width: 300px;
+  background: #1E2025;
+  color: #fff;
+  padding-bottom: 8px; }
+  .recent h4 {
+    padding-left: 8px;
+    float: left;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: normal;
+    font-size: 15px; }
+  .recent .icon {
+    float: left; }
+  .recent span {
+    display: inline-block; }
+  .recent ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+    .recent ul li {
+      padding: 8px;
+      font-size: 13px; }
+      .recent ul li img {
+        vertical-align: middle;
+        margin-right: 8px; }
+
+/*# sourceMappingURL=style.css.map */
