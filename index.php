@@ -1,7 +1,7 @@
 <?php
 
-define('API_KEY', 'A0EC1BC6F1E199CBC422A2659BAD781A'); // fill in your API key
-define('STEAM_ID', 76561198016667233); // fill in your STEAM ID
+define('API_KEY', 'FOO'); // fill in your API key
+define('STEAM_ID', 12345678901234567); // fill in your STEAM ID
 include('vendor/autoload.php');
 define('WEEK', 604800);
 define('DAY', 86400);
